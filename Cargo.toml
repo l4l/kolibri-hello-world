@@ -1,0 +1,14 @@
+[package]
+name = "hw_kolibri"
+version = "0.1.0"
+authors = ["Kitsu <mail@kitsu.me>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+opt-level = "z"
+lto = "thin"
+
+[dependencies]
+cstr_core = { version = "0.2.4", default-features = false, features = ["nightly"] }
