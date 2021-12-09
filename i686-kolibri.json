@@ -7,18 +7,9 @@
     "has-elf-tls": false,
     "has-rpath": true,
     "is-builtin": false,
-    "linker-flavor": "gcc",
-    "linker": "gcc",
+    "linker-flavor": "ld.lld",
+    "linker": "rust-lld",
     "llvm-target": "i686-unknown-none-code32",
-    "pre-link-args": {
-        "gcc": [
-            "-nostdlib",
-            "-Wl,--build-id=none",
-            "-Wl,--as-needed",
-            "-Wl,-z,noexecstack",
-            "-m32"
-        ]
-    },
     "max-atomic-width": 32,
     "os": "none",
     "relocation-model": "static",

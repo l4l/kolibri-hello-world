@@ -14,4 +14,4 @@ lto = "thin"
 cstr_core = { version = "0.2.4", default-features = false, features = ["nightly"] }
 
 [build-dependencies]
-cc = "1.0.72"
+nasm-rs = "0.2.2"

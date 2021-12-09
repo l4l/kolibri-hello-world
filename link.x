@@ -2,8 +2,6 @@ PATH_SIZE   = 1024;
 PARAMS_SIZE =  256;
 STACK_SIZE  = 1024;
 
-OUTPUT_FORMAT("binary")
-
 SECTIONS
 {
 . = 0x24;

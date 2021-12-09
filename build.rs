@@ -1,8 +1,5 @@
 fn main() {
-    println!("cargo:rerun-if-changed=src/syscalls.c");
-    cc::Build::new()
-        .file("src/syscalls.c")
-        .flag("-fno-PIC") // for some reason `pic(false)` doesn't work
-        .static_flag(true)
-        .compile("syscalls");
+    println!("cargo:rerun-if-changed=src/syscalls.S");
+    nasm_rs::compile_library_args("libsyscalls.a", &["src/syscalls.S"], &["-f elf32"])
+        .expect("failed to compile assembly");
 }
